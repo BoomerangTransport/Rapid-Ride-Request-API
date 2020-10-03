@@ -1,9 +1,9 @@
 ## Getting Started
-* All requests are POST requests to this API
-* There is one query parameter which is your API key
+* Only POST request are accepted at this endpoint
+* There is one required query parameter which is your API key
 * There is only one endpoint which is the base url
 * The processing time for these requests is up to 180s
-* Average response time is around 60s
+* Average response time is around <60s
 
 # API
 
@@ -47,32 +47,32 @@ https://script.google.com/macros/s/AKfycbziBycki1g5jYZ_78IKxhSZ7KbOmwGibEMEAI-XD
 ### Body
 ```
   {
-    rideDate: '1602553082',
-    pickupTime: '1602507600',
-    apptTime: '1602511200',
-    originAdd: '4710 Eisenhower Blvd., Tampa, FL 33634',
-    dest1Add: '3210 Lake Emma Rd, Lake Mary, FL 32746',
-    dest2Add: '4710 Eisenhower Blvd., Tampa, FL 33634',
+    rideDate: 1602553962,
+    pickupTime: 1602507600,
+    apptTime: 1602511200,
+    originAdd: "4710 Eisenhower Blvd., Tampa, FL 33634",
+    dest1Add: "3210 Lake Emma Rd, Lake Mary, FL 32746",
+    dest2Add: "4710 Eisenhower Blvd., Tampa, FL 33634",
   }
 ```
 
 ## Example Response:
 ```
 {
-   "processed":true,
-   "data":{
-      "rideDate":1602553962,
-      "pickupTime":1602507600,
-      "apptTime":1602511200,
-      "originAdd":"4710 Eisenhower Blvd., Tampa, FL 33634",
-      "dest1Add":"3210 Lake Emma Rd, Lake Mary, FL 32746",
-      "dest2Add":"4710 Eisenhower Blvd., Tampa, FL 33634",
-      "dest3Add":"",
-      "dest4Add":"",
-      "dest5Add":"",
-      "cr":6,
-      "fr":4,
-      "available":true
+   processed:true,
+   data:{
+      rideDate: 1602553962,
+      pickupTime: 1602507600,
+      apptTime: 1602511200,
+      originAdd: "4710 Eisenhower Blvd., Tampa, FL 33634",
+      dest1Add: "3210 Lake Emma Rd, Lake Mary, FL 32746",
+      dest2Add: "4710 Eisenhower Blvd., Tampa, FL 33634",
+      dest3Add: "",
+      dest4Add: "",
+      dest5Add: "",
+      cr:6,
+      fr:4,
+      available:true
    }
 }
 ```
