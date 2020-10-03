@@ -124,7 +124,7 @@ https://script.google.com/macros/s/AKfycbziBycki1g5jYZ_78IKxhSZ7KbOmwGibEMEAI-XD
 ## Author
 
 * **JP Carlin**  - [Locatejp](https://github.com/locatejp)
-* Unexpected results? [Email Me](mailto:admin@boomerangtransport.net)
+* **Unexpected results?** [Email Me](mailto:admin@boomerangtransport.net)
 
 ## License
 
