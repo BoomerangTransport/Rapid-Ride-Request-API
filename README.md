@@ -41,10 +41,12 @@ https://script.google.com/macros/s/AKfycbziBycki1g5jYZ_78IKxhSZ7KbOmwGibEMEAI-XD
 * The destination 5 address for the trip
 
 
-#### Example request 
+## Example request 
+### URL
 `POST https://script.google.com/macros/s/AKfycbziBycki1g5jYZ_78IKxhSZ7KbOmwGibEMEAI-XDOA2aV3nV6Q/exec?key=XXXXXXXX_YOUR_KEY_HERE_XXXXXXXX`
+### Body
 ```
-  const payload = {
+  {
     rideDate: '1602553082',
     pickupTime: '1602507600',
     apptTime: '1602511200',
@@ -54,69 +56,41 @@ https://script.google.com/macros/s/AKfycbziBycki1g5jYZ_78IKxhSZ7KbOmwGibEMEAI-XD
   };
 ```
 
+## Example Response:
+```
+{
+   "processed":true,
+   "data":{
+      "rideDate":1602553962,
+      "pickupTime":1602507600,
+      "apptTime":1602511200,
+      "originAdd":"4710 Eisenhower Blvd., Tampa, FL 33634",
+      "dest1Add":"3210 Lake Emma Rd, Lake Mary, FL 32746",
+      "dest2Add":"4710 Eisenhower Blvd., Tampa, FL 33634",
+      "dest3Add":"",
+      "dest4Add":"",
+      "dest5Add":"",
+      "cr":6,
+      "fr":4,
+      "available":true
+   }
+}
+```
+### Response Object (only new items detailed):
+#### `processed` | *boolean*
+* Boolean which shows true is a complete request was received and processed
+#### `cr` | *number*
+* An integer showing the number of drivers potentially available for this trip in contract rates
+#### `fr` | *number*
+* An integer showing the number of drivers potentially available for this trip with a flat rate needed
+#### `available` | *boolean*
+* Boolean which indicates if we have at least one driver potentially available for this trip
 
-# JP to pick back up here
-
-
-
-Response:
-```
-{"success":true,"data":[{"id":1,"name":"Carls","email":"carls@employee.com","account":000000000,"row":2},{"id":2,"name":"Alf","email":"alf@employee.com","account":000000000,"row":3},{"id":3,"name":"Rich","email":"rich@employee.com","account":000000000,"row":4},{"id":4,"name":"Salem!","email":"salem@cats.org","account":000000000,"row":5}]}
-```
-### Insert
-
-Query params:
-```
-@parameter-required action=insert
-@parameter-required table=<SHEET_NAME>
-@parameter-required data=JSON
-```
-
-#### Example request :
-`GET https://<yourappscripturl>?action=insert&table=employees&data={"id":5,"name":"John Doe","email":"john@mail.org","account":1111}`
-
-Response:
-```
-{"success":true,"data":{"id":5,"name":"John Doe","email":"john@mail.org","account":1111}
-```
-### Update
-Query params:
-```
-@parameter-required action=update
-@parameter-required table=<SHEET_NAME>
-@parameter-required id=ID
-@parameter-required data=JSON
-```
-To update you only need to provide with the key-value JSON of what's going to change.
-#### Example:
-Request 
-`GET https://<yourappscripturl>?action=update&table=employees&id=5&data={"name":"Johnnathan"}`
-
-Response:
-```
-{"success":true,"data":{"id":5,"name":"Johnnathan","email":"john@mail.org","account":1111}
-```
-
-### Delete
-Query params:
-```
-@parameter-required action=delete
-@parameter-required table=<SHEET_NAME>
-@parameter-required id=ID
-```
-#### Example:
-Request 
-`GET https://<yourappscripturl>?action=delete&table=employees&id=5`
-
-Response:
-```
-{"success":true,"data":{"id":5,"name":"Johnnathan","email":"john@mail.org","account":1111}
-```
 
 ## Author
 
-* **Richard Blondet**  - [RichardBlondet](https://github.com/richardblondet)
+* **JP Carlin**  - [Locatejp](https://github.com/locatejp)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE]([https://opensource.org/licenses/MIT](https://opensource.org/licenses/MIT)) file for details.
+This project is licensed under the Do What The F___ You Want To Public License (WTFPL) - see the [LICENSE]([http://www.wtfpl.net/](http://www.wtfpl.net/)) for details.
