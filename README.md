@@ -78,7 +78,7 @@ https://script.google.com/macros/s/AKfycbziBycki1g5jYZ_78IKxhSZ7KbOmwGibEMEAI-XD
 ```
 ### Response Object (only new items detailed):
 #### `processed` | *boolean*
-* Boolean which shows true if a request was received, validated, and processed
+* Boolean which shows true only if a request was received, validated, and processed
 #### `cr` | *number*
 * Integer showing the number of drivers potentially available for this trip in contract rates
 #### `fr` | *number*
