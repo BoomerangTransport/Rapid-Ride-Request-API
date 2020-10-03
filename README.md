@@ -1,7 +1,7 @@
 ## Getting Started
 * Only POST request are accepted at this endpoint
-* There is one required query parameter which is your API key
 * There is only one endpoint which is the base url
+* There is one required query parameter which is your API key
 * The processing time for these requests is up to 180s
 * Average response time is around <60s
 
@@ -52,15 +52,15 @@ https://script.google.com/macros/s/AKfycbziBycki1g5jYZ_78IKxhSZ7KbOmwGibEMEAI-XD
     apptTime: 1602511200,
     originAdd: "4710 Eisenhower Blvd., Tampa, FL 33634",
     dest1Add: "3210 Lake Emma Rd, Lake Mary, FL 32746",
-    dest2Add: "4710 Eisenhower Blvd., Tampa, FL 33634",
+    dest2Add: "4710 Eisenhower Blvd., Tampa, FL 33634"
   }
 ```
 
 ## Example Response:
 ```
 {
-   processed:true,
-   data:{
+   processed: true,
+   data: {
       rideDate: 1602553962,
       pickupTime: 1602507600,
       apptTime: 1602511200,
@@ -70,25 +70,25 @@ https://script.google.com/macros/s/AKfycbziBycki1g5jYZ_78IKxhSZ7KbOmwGibEMEAI-XD
       dest3Add: "",
       dest4Add: "",
       dest5Add: "",
-      cr:6,
-      fr:4,
-      available:true
+      cr: 6,
+      fr: 4,
+      available: true
    }
 }
 ```
 ### Response Object (only new items detailed):
 #### `processed` | *boolean*
-* Boolean which shows true is a complete request was received and processed
+* Boolean which shows true if a request was received, validated, and processed
 #### `cr` | *number*
-* An integer showing the number of drivers potentially available for this trip in contract rates
+* Integer showing the number of drivers potentially available for this trip in contract rates
 #### `fr` | *number*
-* An integer showing the number of drivers potentially available for this trip with a flat rate needed
+* Integer showing the number of drivers potentially available for this trip with a flat rate needed
 #### `available` | *boolean*
 * Boolean which indicates if we have at least one driver potentially available for this trip
 
-## Error Messages with Responses
+## Error Messages by Parameter with Example Responses
 #### `@parameter-required key` 
-* Make sure you provide a valid API key issued from Boomerang Transport
+* Indicates an invalid API key.  Each request must provide one issued from Boomerang Transport
 ```
 {
    "processed":false,
@@ -96,8 +96,9 @@ https://script.google.com/macros/s/AKfycbziBycki1g5jYZ_78IKxhSZ7KbOmwGibEMEAI-XD
 }
 ```
 #### `rideDate` | `pickupTime` | `apptTime`
-* Make sure date is in seconds (not milliseconds) since Unix epoch
-* Make sure date is not in the past or more than 2 years in the future
+* Indicates the date received did not pass validation
+* Make sure the provided date is in seconds (not milliseconds) since Unix epoch
+* Make sure the provided date is not in the past or more than 2 years in the future
 ```
 {
    "processed":false,
@@ -108,7 +109,8 @@ https://script.google.com/macros/s/AKfycbziBycki1g5jYZ_78IKxhSZ7KbOmwGibEMEAI-XD
 }
 ```
 #### `originAdd` | `dest1Add` | `dest2Add` | `dest3Add` | `dest4Add` | `dest5Add`
-* Address must be valid & recognized by [Google Maps Geocoder](https://developers.google.com/maps/documentation/geocoding/start)
+* Indicates the address did not pass validation
+* Address must recognized by [Google Maps Geocoder](https://developers.google.com/maps/documentation/geocoding/start) as "ROOFTOP" or "RANGE_INTERPOLATED"
 ```
 {
    "processed":false,
