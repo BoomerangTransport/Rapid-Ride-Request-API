@@ -3,7 +3,7 @@
 * There is one query parameter which is your API key
 * There is only one endpoint which is the base url
 * The processing time for these requests is up to 180s
-* Average request time is around 60s
+* Average response time is around 60s
 
 # API
 
@@ -19,10 +19,13 @@ https://script.google.com/macros/s/AKfycbziBycki1g5jYZ_78IKxhSZ7KbOmwGibEMEAI-XD
 ```
 ### Body params:
 #### `rideDate` | required | *timestamp*
+* Expressed as seconds (not milliseconds) since the Unix epoch.
 * The date that the pickup will occur. Only the date itself will be considered, not the time of day.
 #### `pickupTime` | required | *timestamp*
+* Expressed as seconds (not milliseconds) since the Unix epoch.
 * The timestamp for when the pickup will occur
 #### `apptTime` | required | *timestamp*
+* Expressed as seconds (not milliseconds) since the Unix epoch.
 * The timestamp for when the appointment will occur
 #### `originAdd` | required | *string*
 * The origin aka pickup address for the trip 
@@ -42,12 +45,12 @@ https://script.google.com/macros/s/AKfycbziBycki1g5jYZ_78IKxhSZ7KbOmwGibEMEAI-XD
 `POST https://script.google.com/macros/s/AKfycbziBycki1g5jYZ_78IKxhSZ7KbOmwGibEMEAI-XDOA2aV3nV6Q/exec?key=XXXXXXXX_YOUR_KEY_HERE_XXXXXXXX`
 ```
   const payload = {
-    rideDate: 'Thu Jan 01 2099 00:00:00 GMT-0500',
-    pickupTime: 'Thu Jan 01 2099 9:00:00 GMT-0500',
-    apptTime: 'Thu Jan 01 2099 10:00:00 GMT-0500',
-    originAdd: '607 Howard Street, Boone, NC 28607',
-    dest1Add: '1600 Pennsylvania Avenue NW, Washington, DC 20500',
-    dest2Add: '607 Howard Street, Boone, NC 28607',
+    rideDate: '1602553082',
+    pickupTime: '1602507600',
+    apptTime: '1602511200',
+    originAdd: '4710 Eisenhower Blvd., Tampa, FL 33634',
+    dest1Add: '3210 Lake Emma Rd, Lake Mary, FL 32746',
+    dest2Add: '4710 Eisenhower Blvd., Tampa, FL 33634',
   };
 ```
 
