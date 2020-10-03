@@ -91,8 +91,8 @@ https://script.google.com/macros/s/AKfycbziBycki1g5jYZ_78IKxhSZ7KbOmwGibEMEAI-XD
 * Indicates an invalid API key.  Each request must provide a valid API key issued by Boomerang Transport
 ```
 {
-   "processed":false,
-   "data":"Invalid API key provided: XXXXXXXX_INVALID_API_KEY_XXXXXXX"
+   processed: false,
+   data: "Invalid API key provided: XXXXXXXX_INVALID_API_KEY_XXXXXXX"
 }
 ```
 #### `rideDate` | `pickupTime` | `apptTime`
@@ -101,8 +101,8 @@ https://script.google.com/macros/s/AKfycbziBycki1g5jYZ_78IKxhSZ7KbOmwGibEMEAI-XD
 * Make sure the provided date is not in the past or more than 2 years in the future
 ```
 {
-   "processed":false,
-   "data":[
+   processed: false,
+   data: [
       "Invalid date received: DATE_YOU_PROVIDED",
       "Invalid date received: DATE_YOU_PROVIDED_2"
    ]
@@ -113,8 +113,8 @@ https://script.google.com/macros/s/AKfycbziBycki1g5jYZ_78IKxhSZ7KbOmwGibEMEAI-XD
 * Address must recognized by [Google Maps Geocoder](https://developers.google.com/maps/documentation/geocoding/start) as "ROOFTOP" or "RANGE_INTERPOLATED"
 ```
 {
-   "processed":false,
-   "data":[
+   processed: false,
+   data: [
       "Invalid address received: INVALID_ADDRESS_PROVIDED",
       "Invalid address received: INVALID_ADDRESS_PROVIDED_2"
    ]
