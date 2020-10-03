@@ -86,6 +86,38 @@ https://script.google.com/macros/s/AKfycbziBycki1g5jYZ_78IKxhSZ7KbOmwGibEMEAI-XD
 #### `available` | *boolean*
 * Boolean which indicates if we have at least one driver potentially available for this trip
 
+## Error Messages with Responses
+#### `@parameter-required key` 
+* Make sure you provide a valid API key issued from Boomerang Transport
+```
+{
+   "processed":false,
+   "data":"Invalid API key provided: XXXXXXXX_INVALID_API_KEY_XXXXXXX"
+}
+```
+#### `rideDate` | `pickupTime` | `apptTime`
+* Make sure date is in seconds (not milliseconds) since Unix epoch
+* Make sure date is not in the past or more than 2 years in the future
+```
+{
+   "processed":false,
+   "data":[
+      "Invalid date received: DATE_YOU_PROVIDED",
+      "Invalid date received: DATE_YOU_PROVIDED_2"
+   ]
+}
+```
+#### `originAdd` | `dest1Add` | `dest2Add` | `dest3Add` | `dest4Add` | `dest5Add`
+* Address must be valid & recognized by [Google Maps Geocoder](https://developers.google.com/maps/documentation/geocoding/start)
+```
+{
+   "processed":false,
+   "data":[
+      "Invalid address received: INVALID_ADDRESS_PROVIDED",
+      "Invalid address received: INVALID_ADDRESS_PROVIDED_2"
+   ]
+}
+```
 
 ## Author
 
@@ -93,4 +125,4 @@ https://script.google.com/macros/s/AKfycbziBycki1g5jYZ_78IKxhSZ7KbOmwGibEMEAI-XD
 
 ## License
 
-This project is licensed under the Do What The F___ You Want To Public License (WTFPL) - see the [LICENSE]([http://www.wtfpl.net/](http://www.wtfpl.net/)) for details.
+This project is licensed under the Do What The F___ You Want To Public License (WTFPL) - see the [LICENSE](http://www.wtfpl.net/) for details.
