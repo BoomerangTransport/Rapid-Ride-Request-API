@@ -2,8 +2,8 @@
 * Only POST request are accepted at this endpoint
 * There is only one endpoint which is the base url
 * There is one required query parameter which is your API key
-* The processing time for these requests is up to 180s
-* Average response time is around <60s
+* The processing time for requests is up to 180s
+* Average response time is <60s
 
 # API
 
