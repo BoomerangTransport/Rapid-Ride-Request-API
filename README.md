@@ -46,14 +46,14 @@ https://script.google.com/macros/s/AKfycbziBycki1g5jYZ_78IKxhSZ7KbOmwGibEMEAI-XD
 `POST https://script.google.com/macros/s/AKfycbziBycki1g5jYZ_78IKxhSZ7KbOmwGibEMEAI-XDOA2aV3nV6Q/exec?key=XXXXXXXX_YOUR_KEY_HERE_XXXXXXXX`
 ### Body
 ```
-  {
-    rideDate: 1602553962,
-    pickupTime: 1602507600,
-    apptTime: 1602511200,
-    originAdd: "4710 Eisenhower Blvd., Tampa, FL 33634",
-    dest1Add: "3210 Lake Emma Rd, Lake Mary, FL 32746",
-    dest2Add: "4710 Eisenhower Blvd., Tampa, FL 33634"
-  }
+{
+  rideDate: 1602553962,
+  pickupTime: 1602507600,
+  apptTime: 1602511200,
+  originAdd: "4710 Eisenhower Blvd., Tampa, FL 33634",
+  dest1Add: "3210 Lake Emma Rd, Lake Mary, FL 32746",
+  dest2Add: "4710 Eisenhower Blvd., Tampa, FL 33634"
+}
 ```
 
 ## Example Response:
