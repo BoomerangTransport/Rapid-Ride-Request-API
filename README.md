@@ -88,7 +88,7 @@ https://script.google.com/macros/s/AKfycbziBycki1g5jYZ_78IKxhSZ7KbOmwGibEMEAI-XD
 
 ## Error Messages by Parameter with Example Responses
 #### `@parameter-required key` 
-* Indicates an invalid API key.  Each request must provide one issued from Boomerang Transport
+* Indicates an invalid API key.  Each request must provide a valid API key issued by Boomerang Transport
 ```
 {
    "processed":false,
