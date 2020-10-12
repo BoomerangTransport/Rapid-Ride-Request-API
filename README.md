@@ -128,4 +128,4 @@ https://script.google.com/macros/s/AKfycbziBycki1g5jYZ_78IKxhSZ7KbOmwGibEMEAI-XD
 
 ## License
 
-This project is licensed under a MIT License - see the LICENSE for details.
+This project is licensed under a MIT License - see the LICENSE file for details.
