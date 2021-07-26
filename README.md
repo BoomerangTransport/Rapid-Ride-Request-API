@@ -1,5 +1,5 @@
 ## Getting Started
-* Only POST request are accepted at this endpoint
+* Only POST requests are accepted at this endpoint
 * There is only one endpoint which is the base url
 * There is one required query parameter which is your API key
 * The processing time for requests is up to 180s
